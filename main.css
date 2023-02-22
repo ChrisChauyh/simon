@@ -14,6 +14,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    color: rgb(232, 216, 20);
 }
 
 footer {
@@ -30,7 +31,7 @@ menu {
 
 .navbar-brand {
     padding-left: 0.9em;
-    border-bottom: solid rgb(182, 182, 182) thin;
+    border-bottom: solid rgba(176, 38, 38, 0.82) thin;
 }
 
 menu .nav-item {
@@ -42,7 +43,7 @@ footer a {
 }
 
 #count {
-    color: rgb(246, 239, 158);
+    color: rgb(232, 216, 20);
 }
 
 .players {
@@ -52,11 +53,11 @@ footer a {
 }
 
 .player-name {
-    color: rgb(118, 190, 210);
+    color: rgb(20, 189, 236);
 }
 
 .game {
-    background: rgb(0, 0, 0);
+    background: rgb(110, 107, 107);
     border-radius: 50%;
     box-shadow: 0 0 20px 5px rgb(69, 69, 69);
     width: 80vw;
@@ -79,28 +80,28 @@ footer a {
     border-radius: 100% 0 0 0;
     margin: 20px 0 0 20px;
     background-color: green;
-    border: thick solid rgb(36, 53, 0);
+    border: thick solid rgb(255, 255, 255);
 }
 
 .button-top-right {
     border-radius: 0 100% 0 0;
     margin: 20px 20px 0 0;
     background-color: red;
-    border: thick solid rgb(83, 12, 12);
+    border: thick solid rgb(255, 255, 255);
 }
 
 .button-bottom-left {
     border-radius: 0 0 0 100%;
     margin: 0 0 20px 20px;
     background-color: yellow;
-    border: thick solid rgb(130, 124, 13);
+    border: thick solid rgb(255, 255, 255);
 }
 
 .button-bottom-right {
     border-radius: 0 0 100% 0;
     margin: 0 20px 20px 0;
     background-color: blue;
-    border: thick solid rgb(27, 14, 100);
+    border: thick solid rgb(255, 255, 255);
 }
 
 .controls {
@@ -108,7 +109,7 @@ footer a {
     border-radius: 50%;
     width: 200px;
     height: 200px;
-    background-color: black;
+    background-color: #000000;
     padding: 2em;
     display: flex;
     align-items: center;
@@ -143,7 +144,7 @@ footer a {
     transform: translateX(-50%) translateY(-50%);
 }
 
-@media (max-height: 600px) {
+@media (max-height: 300px) {
     header {
         display: none;
     }
@@ -153,4 +154,26 @@ footer a {
     main {
         flex: 1 100vh;
     }
+}
+/* Define a keyframe animation */
+@keyframes jump {
+    0% {
+        text-shadow: 0px 0px #000000;
+        transform: translateY(0);
+    }
+    50% {
+        text-shadow: -3px -3px #000000;
+        transform: translateY(-20px);
+    }
+    100% {
+        text-shadow: 0px 0px #000000;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to an element */
+.jumping-text {
+    font-size: 36px;
+    color: #5b9d64;
+    animation: jump 1s infinite; /* Repeat the animation forever */
 }

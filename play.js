@@ -83,7 +83,10 @@ class Game {
   }
 
   async reset() {
-    document.getElementById("start").textContent = "Reset";
+    if(document.getElementById("start").textContent = "Start")
+    {
+      document.getElementById("start").textContent = "Reset";
+    }
     this.allowPlayer = false;
     this.playerPlaybackPos = 0;
     this.sequence = [];

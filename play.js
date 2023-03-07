@@ -4,7 +4,9 @@ const btnDescriptions = [
   { file: 'sound3.mp3', hue: 60 },
   { file: 'sound4.mp3', hue: 240 },
 ];
-
+window.onload = function() {
+  document.getElementById("start").textContent = "Start";
+};
 class Button {
   constructor(description, el) {
     this.el = el;
@@ -81,6 +83,7 @@ class Game {
   }
 
   async reset() {
+    document.getElementById("start").textContent = "Reset";
     this.allowPlayer = false;
     this.playerPlaybackPos = 0;
     this.sequence = [];
@@ -112,6 +115,7 @@ class Game {
     const scoreEl = document.querySelector('#score');
     scoreEl.textContent = score;
   }
+
 
   async buttonDance(laps = 1) {
     for (let step = 0; step < laps; step++) {

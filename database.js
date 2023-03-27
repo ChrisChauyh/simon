@@ -1,8 +1,8 @@
 const {MongoClient} = require('mongodb');
 
-const userName = "anonymous4586";
-const password = "n3ObW4PyywL5Q09I";
-const hostname = "cluster4586.ihxvlbq.mongodb.net";
+const userName = process.env.MONGOUSER;
+const password = process.env.MONGOPASSWORD;
+const hostname = process.env.MONGOHOSTNAME;
 
 
 if (!userName) {
